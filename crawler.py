@@ -9,8 +9,18 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
 from mongodb import MongoAPI
-from parser import PostParser
-from parser import CommentParser
+import importlib.util
+import sys
+import os
+
+# 动态导入本地的 parser.py 模块以避免与内置 parser 模块冲突
+spec = importlib.util.spec_from_file_location("local_parser", os.path.join(os.path.dirname(__file__), "parser.py"))
+local_parser = importlib.util.module_from_spec(spec)
+sys.modules["local_parser"] = local_parser
+spec.loader.exec_module(local_parser)
+
+PostParser = local_parser.PostParser
+CommentParser = local_parser.CommentParser
 
 
 class PostCrawler(object):
