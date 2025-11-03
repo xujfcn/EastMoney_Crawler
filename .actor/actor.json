@@ -1,0 +1,14 @@
+{
+  "actorSpecification": 1,
+  "name": "eastmoney-stock-forum-crawler",
+  "title": "EastMoney Stock Forum Crawler",
+  "description": "A web scraper that crawls stock forum posts and comments from EastMoney (guba.eastmoney.com) using Playwright. Extracts post titles, authors, timestamps, read counts, reply counts, and comments for specified stock codes.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "readme": "./README.md",
+  "input": "./INPUT_SCHEMA.json",
+  "dockerfile": "./Dockerfile",
+  "environmentVariables": {},
+  "minMemoryMbytes": 512,
+  "maxMemoryMbytes": 2048
+}

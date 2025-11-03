@@ -1,0 +1,54 @@
+{
+  "title": "EastMoney Stock Forum Crawler Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "stockCode": {
+      "title": "Stock Code",
+      "type": "string",
+      "description": "The stock code to crawl (e.g., '002001' for 新和成)",
+      "default": "002001",
+      "editor": "textfield"
+    },
+    "stockName": {
+      "title": "Stock Name",
+      "type": "string",
+      "description": "The stock name (e.g., '新和成')",
+      "default": "新和成",
+      "editor": "textfield"
+    },
+    "maxPosts": {
+      "title": "Maximum Posts",
+      "type": "integer",
+      "description": "Maximum number of posts to crawl",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 100,
+      "editor": "number"
+    },
+    "crawlComments": {
+      "title": "Crawl Comments",
+      "type": "boolean",
+      "description": "Whether to crawl comments for each post",
+      "default": false,
+      "editor": "checkbox"
+    },
+    "headless": {
+      "title": "Headless Mode",
+      "type": "boolean",
+      "description": "Run browser in headless mode",
+      "default": true,
+      "editor": "checkbox"
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "description": "Proxy settings for the crawler",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": false
+      }
+    }
+  },
+  "required": ["stockCode", "stockName"]
+}

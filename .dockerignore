@@ -1,0 +1,51 @@
+# Git files
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+playwright_crawler.log
+
+# JSON output files (crawler results)
+*.json
+!INPUT_SCHEMA.json
+!.actor/actor.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+test_*.py
+*_test.py
+
+# Documentation
+*.md
+!README.md
+
+# Old backup files
+*_old.py
+*.bak
+
+# Apify storage (local development)
+apify_storage/
+storage/
